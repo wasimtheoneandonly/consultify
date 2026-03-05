@@ -4,15 +4,15 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Consultify</title>
-<meta name="description" content="The first 150 founding members get a free 4-week live workshop series worth $997 — plus full access for $49/month. Only 147 spots left.">
+<meta name="description" content="The first 150 founding members get Zero to Billable™ — a free 4-week hands-on coaching program worth $997 — plus full access for $49/month. Only 147 spots left.">
 <meta property="og:title" content="Consultify — Be Your Own Boss. We Handle the Rest.">
-<meta property="og:description" content="The first 150 founding members get a free 4-week live workshop series worth $997 — plus full access for $49/month. Only 147 spots left.">
+<meta property="og:description" content="The first 150 founding members get Zero to Billable™ — a free 4-week hands-on coaching program worth $997 — plus full access for $49/month. Only 147 spots left.">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://consultifyme.netlify.app">
 <meta property="og:image" content="https://consultifyme.netlify.app/thumbnail.jpg">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Consultify — Be Your Own Boss. We Handle the Rest.">
-<meta name="twitter:description" content="The first 150 founding members get a free 4-week live workshop series worth $997 — plus full access for $49/month. Only 147 spots left.">
+<meta name="twitter:description" content="The first 150 founding members get Zero to Billable™ — a free 4-week hands-on coaching program worth $997 — plus full access for $49/month. Only 147 spots left.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=DM+Sans:wght@400;500&display=swap" rel="stylesheet">
 <style>
@@ -208,6 +208,51 @@
   .offer-card h3 { font-size: 0.98rem; font-weight: 800; margin-bottom: 8px; letter-spacing: -0.02em; }
   .offer-card p { font-size: 0.83rem; color: var(--muted); line-height: 1.6; }
   .offer-value { font-size: 0.75rem; color: var(--blue-light); font-weight: 600; margin-top: 10px; }
+
+  /* FOUNDING OFFER — first section, big & bold */
+  .founding-offer-section {
+    padding: 64px 32px 72px;
+    background: linear-gradient(180deg, rgba(255,107,53,0.18) 0%, rgba(255,107,53,0.06) 100%);
+    border-top: 2px solid rgba(255,107,53,0.5);
+    border-bottom: 2px solid rgba(255,107,53,0.35);
+    text-align: center;
+  }
+  .founding-offer-section .founding-badge {
+    font-size: 0.8rem;
+    font-weight: 800;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: #ff6b35;
+    margin-bottom: 20px;
+  }
+  .founding-offer-section .founding-title {
+    font-family: 'Inter', sans-serif;
+    font-size: 2.4rem;
+    font-weight: 900;
+    letter-spacing: -0.04em;
+    line-height: 1.2;
+    margin: 0 auto 20px;
+    max-width: 720px;
+    color: #fff;
+  }
+  .founding-offer-section .founding-desc {
+    font-size: 1.15rem;
+    line-height: 1.8;
+    color: rgba(255,255,255,0.85);
+    max-width: 640px;
+    margin: 0 auto 24px;
+  }
+  .founding-offer-section .founding-desc strong { color: #fff; }
+  .founding-offer-section .founding-spots {
+    font-size: 0.95rem;
+    color: rgba(255,255,255,0.6);
+  }
+  .founding-offer-section .founding-spots strong { color: #ff6b35; }
+  @media (max-width: 600px) {
+    .founding-offer-section { padding: 48px 20px 56px; }
+    .founding-offer-section .founding-title { font-size: 1.75rem; }
+    .founding-offer-section .founding-desc { font-size: 1rem; }
+  }
 
   /* TESTIMONIALS */
   .testi-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 18px; }
@@ -479,7 +524,7 @@
     <ul class="hero-bullets">
       <li><span>Start your own consulting business with <strong>absolutely zero risk</strong></span></li>
       <li><span>We walk you from A to Z — mindset, pricing, outreach, closing deals</span></li>
-      <li><span>First 150 members get a free 4-week live hands-on workshop series worth $997</span></li>
+      <li><span>First 150 members get <strong>Zero to Billable™</strong> — our hands-on coaching program — <strong>free</strong> (4-week live series worth $997)</span></li>
       <li><span>Most members replace their current income within <strong>3 months or less</strong></span></li>
     </ul>
     <p style="font-size:1.05rem;color:rgba(255,255,255,0.75);margin-bottom:32px;line-height:1.7;">Courses, templates, community, your team, and AI workshops — <strong style="color:#fff;">all for $49/month.</strong> That means personal, high-touch support while founding spots last.</p>
@@ -527,12 +572,20 @@
   </div>
 </section>
 
+<!-- FOUNDING MEMBER OFFER — first section, big & unmissable -->
+<section class="founding-offer-section reveal">
+  <div class="founding-badge">🔥 Founding Members Only — First 150 Spots</div>
+  <h2 class="founding-title">Free 4-Week Live "Zero to Billable™" — Hands-On Coaching Program</h2>
+  <p class="founding-desc">I personally guide you through mindset, niche selection, pricing, outreach, proposals, closing deals, and team pairing — live, over 4 weeks. This hands-on coaching program is <strong>free for founding members.</strong> Ask questions. Get real feedback. Land your first client.<br><br>After 150 members, this becomes a <strong>$997 one-time add-on</strong>. Founding members lock in their spot <strong>for free.</strong></p>
+  <div class="founding-spots">⏳ Only <strong>147 of 150</strong> founding spots remaining</div>
+</section>
+
 <!-- STATS BAR -->
 <div class="stats-bar reveal">
   <div><div class="stat-num">150</div><div class="stat-label">Total Founding Spots</div></div>
   <div><div class="stat-num" style="color:#ff6b35;">147</div><div class="stat-label">Spots Remaining</div></div>
-  <div><div class="stat-num">$<span>49</span></div><div class="stat-label">Per Month, All In</div></div>
-  <div><div class="stat-num">$<span>197</span></div><div class="stat-label">Workshop Value ($997) — Free for Founding Members</div></div>
+  <div><div class="stat-num">$<span style="color:#22c55e">49</span></div><div class="stat-label">Per Month, All In</div></div>
+  <div><div class="stat-num">$<span>997</span></div><div class="stat-label">Workshop Value ($997) — Free for Founding Members</div></div>
 </div>
 
 <!-- HOW IT WORKS -->
@@ -572,12 +625,6 @@
     <div class="section-label">What You Get</div>
     <h2 class="section-title">Everything you need.<br>Nothing you don't.</h2>
     <p class="section-sub" style="margin:0 auto;">$49/month gets you the full toolkit. No upsells. No hidden tiers. Just results.</p>
-  </div>
-  <div class="reveal" style="background:rgba(255,107,53,0.1);border:1px solid rgba(255,107,53,0.4);border-radius:18px;padding:32px;margin-bottom:28px;text-align:center;">
-    <div style="font-size:0.72rem;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:#ff6b35;margin-bottom:12px;">🔥 Founding Members Only — First 150 Spots</div>
-    <h3 style="font-family:'Inter',sans-serif;font-size:1.3rem;font-weight:800;letter-spacing:-0.03em;margin-bottom:14px;">Free 4-Week Live "From Zero to First Client" Workshop Series</h3>
-    <p style="color:rgba(255,255,255,0.72);font-size:0.92rem;line-height:1.75;max-width:620px;margin:0 auto 16px;">I personally guide you through mindset, niche selection, pricing, outreach, proposals, closing deals, and team pairing — live, over 4 weeks. Ask questions. Get real feedback. Land your first client.<br><br>After 150 members, this becomes a <strong style="color:#fff;">$197 one-time add-on</strong>. Founding members lock in their spot <strong style="color:#fff;">for free.</strong></p>
-    <div style="font-size:0.85rem;color:rgba(255,255,255,0.5);">⏳ Only <strong style="color:#ff6b35;">147 of 150</strong> founding spots remaining</div>
   </div>
   <div class="offer-grid reveal">
     <div class="offer-card">
@@ -794,11 +841,11 @@
   </div>
   <div class="pricing-wrap reveal">
     <div class="pricing-card">
-      <div class="pricing-badge" style="background:#ff6b35;">🔥 Founding Member Bonus — Free $997 Workshop Included</div>
+      <div class="pricing-badge" style="background:#ff6b35;">🔥 Founding Member Bonus — Zero to Billable™ Hands-On Coaching Program (Free)</div>
       <div class="price-tag"><sup>$</sup>49</div>
       <div class="price-per">per month · cancel anytime</div>
       <ul class="pricing-features">
-        <li class="price-feature-item"><span class="feat-text">🎯 4-Week Live Workshop Series — "Zero to First Client" (free for founding members)</span><span class="feat-val">$997 value</span></li>
+        <li class="price-feature-item"><span class="feat-text">🎯 4-Week Live Hands-On Coaching — "Zero to Billable™" (free for founding members)</span><span class="feat-val">$997 value</span></li>
         <li class="price-feature-item"><span class="feat-text">⚡ Priority access to team matching and project board</span><span class="feat-val">$97 value</span></li>
         <li class="price-feature-item"><span class="feat-text">2 Instant Starter Courses (day one)</span><span class="feat-val">$97 value</span></li>
         <li class="price-feature-item"><span class="feat-text">Find your dream consulting team and take on enterprise-level projects</span><span class="feat-val">Priceless</span></li>
@@ -817,7 +864,7 @@
         <button class="btn-pricing">Yes, I Want In — $49/month</button>
       </a>
       <p class="pricing-fine">30-day satisfaction guarantee · Cancel anytime · No contracts</p>
-      <p class="pricing-risk">⚡ After 150 members, the 4-week live workshop becomes a <strong>$197 add-on</strong>. Join now and <strong>lock in your spot for free.</strong></p>
+      <p class="pricing-risk">⚡ After 150 members, the Zero to Billable™ hands-on coaching program becomes a <strong>$997 add-on</strong>. Join now and <strong>lock in your spot for free.</strong></p>
     </div>
   </div>
 </section>
