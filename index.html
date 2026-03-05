@@ -25,9 +25,12 @@
     --card-border: rgba(255,255,255,0.09);
     --text: #ffffff;
     --muted: rgba(255,255,255,0.52);
+    --banner-height: 48px;
+    --nav-height: 80px;
+    --header-offset: calc(var(--banner-height) + var(--nav-height));
   }
   *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-  html { scroll-behavior: smooth; }
+  html { scroll-behavior: smooth; scroll-padding-top: var(--header-offset); }
   body {
     background: var(--bg);
     background-image:
@@ -36,6 +39,7 @@
       radial-gradient(ellipse 55% 45% at 50% 105%, rgba(59,111,255,0.2) 0%, transparent 60%);
     background-attachment: fixed;
     color: var(--text); font-family: 'DM Sans', sans-serif; font-size: 16px; line-height: 1.6; overflow-x: hidden;
+    padding-top: var(--header-offset);
   }
   h1,h2,h3,h4 { font-family: 'Inter', sans-serif; }
 
@@ -45,11 +49,27 @@
     pointer-events: none; z-index: 0; opacity: .5;
   }
 
+
+  .top-banner {
+    position: fixed; top: 0; left: 0; right: 0; z-index: 200;
+    background: linear-gradient(90deg,#ff6b35,#ff4500,#ff6b35);
+    text-align: center;
+    padding: 11px 20px;
+    font-family: Inter, sans-serif;
+    font-size: 0.88rem;
+    font-weight: 700;
+    color: #fff;
+    box-shadow: 0 2px 20px rgba(255,107,53,0.5);
+    min-height: var(--banner-height);
+  }
+  .top-banner a { color: #fff; }
+
   /* NAV */
   nav {
-    position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+    position: fixed; top: var(--banner-height); left: 0; right: 0; z-index: 100;
     display: flex; align-items: center; justify-content: space-between;
     padding: 20px 60px;
+    min-height: var(--nav-height);
     backdrop-filter: blur(20px);
     background: rgba(21,32,64,0.85);
     border-bottom: 1px solid rgba(255,255,255,0.06);
@@ -67,7 +87,7 @@
   .hero {
     position: relative; min-height: 100vh;
     display: flex; flex-direction: column; justify-content: center;
-    padding: 140px 60px 80px; overflow: hidden;
+    padding: 80px 60px 80px; overflow: hidden;
   }
   .hero-glow {
     position: absolute; top: -10%; right: -5%;
@@ -249,9 +269,10 @@
 
   /* TABLET */
   @media (max-width: 900px) {
+    :root { --nav-height: 72px; }
     nav { padding: 18px 28px; }
     section { padding: 70px 28px; }
-    .hero { padding: 120px 28px 60px; }
+    .hero { padding: 70px 28px 60px; }
     .hero-social-proof { grid-template-columns: 1fr; }
     .stats-bar { grid-template-columns: repeat(2,1fr); padding: 36px 28px; }
     .steps-grid { grid-template-columns: repeat(2,1fr); }
@@ -262,10 +283,11 @@
 
   /* MOBILE */
   @media (max-width: 600px) {
+    :root { --banner-height: 64px; --nav-height: 68px; }
     nav { padding: 16px 20px; }
     .nav-cta { padding: 9px 16px; font-size: 0.82rem; }
     section { padding: 56px 20px; }
-    .hero { padding: 100px 20px 48px; min-height: auto; }
+    .hero { padding: 56px 20px 48px; min-height: auto; }
     .hero h1 { font-size: 2.1rem; }
     .hero-bullets li { font-size: 0.95rem; }
     .btn-hero { width: 100%; padding: 16px; font-size: 1rem; }
@@ -299,12 +321,13 @@
 
   /* ── GLOBAL MOBILE ── */
   @media (max-width: 600px) {
+    .top-banner { font-size: 0.75rem; line-height: 1.35; padding: 8px 12px; }
     /* Nav */
     nav { padding: 16px 20px !important; }
     .nav-links { display: none !important; }
 
     /* Hero */
-    .hero { padding: 120px 20px 60px !important; }
+    .hero { padding: 70px 20px 60px !important; }
     .hero h1 { font-size: 2.2rem !important; line-height: 1.1 !important; }
     .hero-inner { max-width: 100% !important; }
     .hero-cta { flex-direction: column !important; gap: 12px !important; }
@@ -372,7 +395,7 @@
   }
 
   @media (max-width: 900px) {
-    .hero { padding: 130px 40px 70px !important; }
+    .hero { padding: 78px 40px 70px !important; }
     .hero h1 { font-size: 3rem !important; }
     .steps-grid { grid-template-columns: repeat(2,1fr) !important; }
     .testi-grid { grid-template-columns: repeat(2,1fr) !important; }
@@ -436,7 +459,7 @@
 
 </style>
 </head>
-<body> <div style="position:fixed;top:0;left:0;right:0;z-index:200;background:linear-gradient(90deg,#ff6b35,#ff4500,#ff6b35);text-align:center;padding:11px 20px;font-family:Inter,sans-serif;font-size:0.88rem;font-weight:700;color:#fff;box-shadow:0 2px 20px rgba(255,107,53,0.5);"> ⚡ <span style="color:#ffe066">Only 147 of 150 founding spots left.</span> Join now and get <strong>Zero to Billable™</strong> — our $997 live accelerator — <strong>FREE.</strong> &nbsp;<a href="https://buy.stripe.com/4gMbJ271O3fefQz7otdIA02" target="_blank" style="color:#fff">Claim your spot →</a> </div>
+<body> <div class="top-banner"> ⚡ <span style="color:#ffe066">Only 147 of 150 founding spots left.</span> Join now and get <strong>Zero to Billable™</strong> — our $997 live accelerator — <strong>FREE.</strong> &nbsp;<a href="https://buy.stripe.com/4gMbJ271O3fefQz7otdIA02" target="_blank">Claim your spot →</a> </div>
 
 <!-- NAV -->
 <nav>
@@ -820,6 +843,36 @@
     entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
   }, { threshold: 0.1 });
   reveals.forEach(r => observer.observe(r));
+
+  const root = document.documentElement;
+  const banner = document.querySelector('.top-banner');
+  const nav = document.querySelector('nav');
+
+  const syncFixedHeaderOffset = () => {
+    const bannerHeight = banner ? Math.ceil(banner.getBoundingClientRect().height) : 0;
+    root.style.setProperty('--banner-height', `${bannerHeight}px`);
+
+    if (nav) {
+      nav.style.top = `${bannerHeight}px`;
+      const navHeight = Math.ceil(nav.getBoundingClientRect().height);
+      root.style.setProperty('--nav-height', `${navHeight}px`);
+      root.style.setProperty('--header-offset', `${bannerHeight + navHeight}px`);
+    } else {
+      root.style.setProperty('--nav-height', '0px');
+      root.style.setProperty('--header-offset', `${bannerHeight}px`);
+    }
+  };
+
+  syncFixedHeaderOffset();
+  window.addEventListener('load', syncFixedHeaderOffset);
+  window.addEventListener('resize', syncFixedHeaderOffset);
+  window.addEventListener('orientationchange', syncFixedHeaderOffset);
+
+  if (window.ResizeObserver) {
+    const headerResizeObserver = new ResizeObserver(syncFixedHeaderOffset);
+    if (banner) headerResizeObserver.observe(banner);
+    if (nav) headerResizeObserver.observe(nav);
+  }
 </script>
 </body>
 </html>
